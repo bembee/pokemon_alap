@@ -1,0 +1,69 @@
+
+* {
+    margin: auto;
+    box-sizing: border-box;
+    max-width: 1200px;
+}
+.tartalom{
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding-top: 30px;
+    text-align: center;
+}
+
+main{
+    display: grid;
+    grid-template-areas: 
+        "a a a a"
+        "t t t t";
+}
+aside{
+    grid-area:a;  
+    text-align: center;
+}
+article{
+    grid-area:t;  
+}
+ 
+main {
+    margin: auto;
+    padding:10px;
+}
+
+body{
+    background-color: gray;
+
+}
+
+.sablon{
+    width: 200px;
+    border: 1px solid black;
+    border-radius: 25px;
+    margin: auto;
+    padding: 10px;
+}
+
+@media screen and (max-width: 850px) {
+    .tartalom {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .tartalom {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .tartalom {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media screen and (max-width: 400px) {
+    .tartalom {
+        grid-template-columns:1fr;
+    }
+}
