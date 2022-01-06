@@ -20,8 +20,8 @@ $(function () {
 
     /**Gyorsan és rendezetten */
     const pokemonTomb = [];
-    const szinek = new Map();
-    myAszinkron.getAllSzin(szinek);
+   
+   
 
     aktPokemon();
     function aktPokemon() {
@@ -49,30 +49,11 @@ $(function () {
             let node = sablonElem.clone().appendTo(szuloElem);
             console.log(element.types[0].type.name);
             //console.log(szinek);
-            element.szin = szinek.get(element.types[0].type.name);
+         
             const obj = new Pokemon(node, element);
         });
         sablonElem.remove();
     }
 
-    /**rekurzio - Asszinkron kiegyensítve*/
-    /*  sablonElem.remove();
-
-    let i = 1;
-    aktPokemon(i);
-    function aktPokemon(i) {
-        if (i <= max) {
-            let apivegpont = "https://pokeapi.co/api/v2/pokemon/" + i;
-            myAszinkron.getAdat(apivegpont, pokemonLista, i);
-        }
-    }
-
-  
-
-    function pokemonLista(pokemonok) {
-        let node = sablonElem.clone().appendTo(szuloElem);
-        const obj = new Pokemon(node, pokemonok);
-        i++;
-        aktPokemon(i);
-    } */
+   
 });
