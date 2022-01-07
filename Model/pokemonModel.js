@@ -2,14 +2,14 @@ class MyAszinkron {
     constructor() {}
 
     getAdat(vegpont, myCallback) {
-        let tomb = [];
+        let obj = {};
         $.ajax({
             url: vegpont,
             type: "GET",
             success: function (result) {
-                tomb = result;
+                obj = result;
                 
-                myCallback(tomb);
+                myCallback(obj);
             },
         });
     }
